@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { breakpoints } from 'rwd/breakpoints';
+import { breakpoints } from '../../rwd/breakpoints';
 
 export const Wrapper = styled.div`
   margin: 10px;
@@ -32,6 +31,9 @@ export const Board = styled.h2`
 export const Title = styled.h3`
   margin: 4px 0;
   font-size: 14px;
+
+  @media ${breakpoints.sm} {
+  }
 `;
 
 export const Content = styled.p`
@@ -82,8 +84,4 @@ export const Comments = styled.p`
   &:hover {
     color: black;
   }
-`;
-
-export const StyledLink = styled(Link)`
-  text-decoration: none;
 `;

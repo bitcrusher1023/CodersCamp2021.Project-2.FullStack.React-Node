@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import {
   Wrapper,
   ReadMore,
@@ -8,12 +7,12 @@ import {
   Board,
   ShortContent,
   TextWrapper,
-  StyledLink,
 } from './Announcement.styled';
+import PropTypes from 'prop-types';
 import AnnouncementIcon from '../AnnouncementIcon/AnnouncementIcon';
 
 const Announcement = ({ announcement, isOpen, showBoard }) => {
-  const { title, iconType, boardName, content, comments, id } = announcement;
+  const { title, iconType, boardName, content, comments } = announcement;
 
   const commentsText =
     comments && (comments.length === 1 ? '[1 comment]' : `[${comments.length} comments]`);
@@ -29,12 +28,10 @@ const Announcement = ({ announcement, isOpen, showBoard }) => {
         ) : (
           <>
             <ShortContent>{content}</ShortContent>
-            <StyledLink to={`/announcement/${id}`}>
-              <ReadMore>[read more]</ReadMore>
-              <Comments>{commentsText}</Comments>
-            </StyledLink>
+            <ReadMore>[read&nbsp;more]</ReadMore>
           </>
         )}
+        <Comments>{commentsText}</Comments>
       </TextWrapper>
     </Wrapper>
   );
