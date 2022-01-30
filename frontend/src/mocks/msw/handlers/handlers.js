@@ -1,9 +1,5 @@
 import { commentListHandlers } from './commentLists/commentListsHandler';
-import getAllBoardsHandler from './boardsLists/boardsListsHandler';
-import { announcementListHandler } from './announcementLists/announcementListHandlers';
+import boardsListsHandler from './boardsLists/boardsListsHandler';
+import announcementsHandler from './announcements/announcementHandler';
 
-export const handlers = [
-  ...commentListHandlers,
-  ...getAllBoardsHandler,
-  ...announcementListHandler,
-];
+export const handlers = [...commentListHandlers, boardsListsHandler, announcementsHandler];
